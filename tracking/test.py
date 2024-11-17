@@ -16,7 +16,7 @@ from lib.test.evaluation.running import run_dataset
 from lib.test.evaluation.tracker import Tracker
 
 
-def run_tracker(tracker_name, tracker_param, run_id=None, dataset_name='otb', sequence=None, debug=0, threads=0,
+def run_tracker(tracker_name, tracker_param, run_id=None, dataset_name='uav', sequence=None, debug=0, threads=0,
                 num_gpus=8):
     """
     Run tracker on sequence or dataset.
@@ -46,7 +46,7 @@ def main():
     parser.add_argument('--tracker', type=str, default='aiatrack', help='name of tracking method')
     parser.add_argument('--param', type=str, default='baseline', help='name of config file')
     parser.add_argument('--id', type=int, default=None, help='the run ID')
-    parser.add_argument('--dataset', type=str, default='lasot',
+    parser.add_argument('--dataset', type=str, default='uav',
                         help='name of dataset (otb, nfs, uav, trackingnet, got_test, got_val, lasot, lasot_ext)')
     parser.add_argument('--seq', type=str, default=None, help='sequence number or name')
     parser.add_argument('--debug', type=int, default=0, help='debug level')
